@@ -103,6 +103,7 @@ output=layers.TimeDistributed(
       layers.Dense(num_tags,activation="softmax"))(bidirectional_lstm)
 model = Model(input_word, output)
 model.summary()
+print("MARELLA DHARANESH : 212222240062")
 
 model.compile(optimizer="adam",
               loss="sparse_categorical_crossentropy",
@@ -121,8 +122,10 @@ metrics = pd.DataFrame(model.history.history)
 metrics.head()
 
 metrics[['accuracy','val_accuracy']].plot()
+print("MARELLA DHARANESH : 212222240062")
 
 metrics[['loss','val_loss']].plot()
+print("MARELLA DHARANESH : 212222240062")
 
 i = 20
 
